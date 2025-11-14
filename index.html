@@ -139,6 +139,12 @@
             font-weight: 600;
             border: none;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .banner-image {
@@ -248,6 +254,11 @@
             border-radius: 6px;
             overflow: hidden;
             border-left: 3px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
         }
 
         .service-icon {
@@ -343,6 +354,11 @@
             text-decoration: none;
             margin-top: 8px;
             font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
         }
 
         .map-container {
@@ -361,6 +377,7 @@
             padding: 20px;
             border-radius: 6px;
             margin-top: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
         .form-group {
@@ -380,6 +397,20 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1rem;
+        }
+        
+        .phone-selector {
+            margin-bottom: 12px;
+        }
+        
+        .phone-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .phone-option input {
+            margin-right: 8px;
         }
     </style>
 </head>
@@ -447,12 +478,9 @@
                     <div class="service-content">
                         <h3>Tratamientos Faciales</h3>
                         <ul>
-                            <li>Limpieza de cutis sencilla</li>
-                            <li>Limpieza, exfoliación, vapor, extracción</li>
-                            <li>Altafrecuencia y mascarilla</li>
-                            <li>Limpieza de cutis profunda</li>
-                            <li>Limpieza completa (cara, cuello, escote)</li>
-                            <li>Limpieza de espalda</li>
+                            <li>Limpieza de cutis sencilla - $4 USD</li>
+                            <li>Limpieza de cutis profunda - $5 USD</li>
+                            <li>Limpieza de espalda - $7 USD</li>
                         </ul>
                     </div>
                 </div>
@@ -462,14 +490,21 @@
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Tratamientos Especializados</h3>
+                        <h3>Tratamientos Plus</h3>
                         <ul>
-                            <li>Tratamientos Antiacné</li>
-                            <li>Micropunción dérmica o dermapen</li>
-                            <li>Nutrición facial con vitaminas</li>
-                            <li>Hidratación de labios con vitaminas</li>
-                            <li>Manchas solares y melasma</li>
-                            <li>Estrías corporales</li>
+                            <li>Tratamiento con micropunción dérmica (hidratación y nutrición) - $5 USD</li>
+                            <li>Relleno de labios con ácido hialurónico - $120 USD/cc</li>
+                            <li>Armonización facial con ácido hialurónico - $120 USD/cc</li>
+                            <li>Tratamiento de despigmentación - $5 USD</li>
+                            <li>Tratamiento antiedad - $6 USD</li>
+                            <li>Tratamiento Antiacné - $5 USD</li>
+                            <li>Tratamientos despigmentantes - $6 USD</li>
+                            <li>Plasma rico en plaquetas - $8 USD</li>
+                            <li>Dermaplaning - $4 USD</li>
+                            <li>Peeling - $6 USD</li>
+                            <li>Tratamiento con fibroblast o plasmapen - Desde $3 USD</li>
+                            <li>Maderoterapia facial - $5 USD</li>
+                            <li>Aparatología facial avanzada - $6 USD</li>
                         </ul>
                     </div>
                 </div>
@@ -479,14 +514,30 @@
                         <i class="fas fa-star"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Servicios Premium</h3>
+                        <h3>Tratamientos Corporales</h3>
                         <ul>
-                            <li>Plasma Rico en Plaquetas</li>
-                            <li>Peeling facial despigmentantes</li>
-                            <li>Dermaplaning facial</li>
-                            <li>Fibroblast o plasmapen</li>
-                            <li>Tratamientos para arrugas y flacidez</li>
-                            <li>Párpados, frente, nariz, cuello</li>
+                            <li>Tratamiento para estrías (glúteos, muslos, abdomen y brazos) - $6 USD</li>
+                            <li>Masaje corporal completo y por regiones - Desde $3 USD</li>
+                            <li>Drenaje linfático posquirúrgico - $6 USD</li>
+                            <li>Drenaje linfático + aparatología - $8 USD</li>
+                            <li>Tratamientos reductivos (anticelulítico, ultracavitación, radiofrecuencia, lipolaser, vacumterapia) - Desde $6 USD</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Otros Servicios</h3>
+                        <ul>
+                            <li>Tinte de cejas y labios con henna - Desde $2 USD</li>
+                            <li>Tatuaje de cejas efecto polvo - $10 USD</li>
+                            <li>Eliminación de lunares y verrugas - $1 USD (5 unidades)</li>
+                            <li>Eliminación de lipomas y quistes sebáceos - $5 USD</li>
+                            <li>Pestañas de punto - $4 USD</li>
+                            <li>Depilación facial - Desde $200 MN</li>
                         </ul>
                     </div>
                 </div>
@@ -563,13 +614,25 @@
                                 <select id="service" class="form-control" required>
                                     <option value="">Selecciona un servicio</option>
                                     <option value="facial">Tratamientos Faciales</option>
-                                    <option value="especializado">Tratamientos Especializados</option>
-                                    <option value="premium">Servicios Premium</option>
+                                    <option value="plus">Tratamientos Plus</option>
+                                    <option value="corporal">Tratamientos Corporales</option>
+                                    <option value="otros">Otros Servicios</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="date">Fecha preferida</label>
                                 <input type="date" id="date" class="form-control" required>
+                            </div>
+                            <div class="phone-selector">
+                                <label>Selecciona un número para contactarte:</label>
+                                <div class="phone-option">
+                                    <input type="radio" id="phone1" name="contactPhone" value="+5354415523" checked>
+                                    <label for="phone1">+5354415523</label>
+                                </div>
+                                <div class="phone-option">
+                                    <input type="radio" id="phone2" name="contactPhone" value="+5358458026">
+                                    <label for="phone2">+5358458026</label>
+                                </div>
                             </div>
                             <button type="submit" class="btn">Reservar cita</button>
                         </form>
@@ -590,18 +653,38 @@
                 const phone = document.getElementById('phone').value;
                 const service = document.getElementById('service').value;
                 const date = document.getElementById('date').value;
+                const selectedPhone = document.querySelector('input[name="contactPhone"]:checked').value;
                 
                 const appointmentData = {
                     name,
                     phone,
                     service,
                     date,
+                    selectedPhone,
                     timestamp: new Date().toISOString()
                 };
                 
                 localStorage.setItem('appointmentData', JSON.stringify(appointmentData));
                 
-                alert('¡Cita reservada con éxito! Te contactaremos pronto para confirmar.');
+                // Enviar mensaje por WhatsApp
+                const serviceText = {
+                    'facial': 'Tratamientos Faciales',
+                    'plus': 'Tratamientos Plus',
+                    'corporal': 'Tratamientos Corporales',
+                    'otros': 'Otros Servicios'
+                };
+                
+                const message = `Hola, me gustaría reservar una cita en ALY Salón de Belleza.%0A%0A` +
+                               `*Nombre:* ${name}%0A` +
+                               `*Teléfono:* ${phone}%0A` +
+                               `*Servicio:* ${serviceText[service]}%0A` +
+                               `*Fecha preferida:* ${date}%0A%0A` +
+                               `Por favor, confirmen mi cita. ¡Gracias!`;
+                
+                // Abrir WhatsApp con el mensaje
+                window.open(`https://wa.me/${selectedPhone}?text=${message}`, '_blank');
+                
+                alert('¡Cita reservada con éxito! Se abrirá WhatsApp para que envíes tu solicitud.');
                 appointmentForm.reset();
             }
             
@@ -624,6 +707,7 @@
             
             appointmentForm.addEventListener('submit', handleAppointmentForm);
             
+            // Cargar datos guardados si existen
             const savedAppointment = localStorage.getItem('appointmentData');
             if (savedAppointment) {
                 const appointment = JSON.parse(savedAppointment);
@@ -631,6 +715,10 @@
                 document.getElementById('phone').value = appointment.phone || '';
                 document.getElementById('service').value = appointment.service || '';
                 document.getElementById('date').value = appointment.date || '';
+                
+                if (appointment.selectedPhone) {
+                    document.querySelector(`input[value="${appointment.selectedPhone}"]`).checked = true;
+                }
             }
         });
     </script>
